@@ -1,26 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-const Picture = () => {
-
-    const [data, setData] = useState([])
-
-    useEffect(() => {
-        axios
-        .get ('https://api.nasa.gov/planetary/apod?api_key=Yrp5SUzrZP3vwgceBfbRyCuiWHWan9BF5eAwjM62')
-        .then(response => {
-            setData(response.data)
-            console.log('response: ', response.data.date)
-        })
-        .catch(error => {
-            return 'error', error
-        })
-    }, [])
-
-    console.log(data)
-
+const Picture = (props) => {
     return (    
-        <h1>Hello</h1>
+        <img src={props.urlState} />
     )
 }
 
