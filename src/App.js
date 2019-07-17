@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import Picture from'./components/Picture';
 import Explanation from './components/Explanation';
+import Header from './components/Header';
 
 import axios from "axios";
 
 import "./App.css";
 
 function App() {
-
-  const [data, setData] = useState([])
+  // Created a state for each piece of data being passed around
   const [dateState, setDateState] = useState([])
   const [explanationState, setExplanationState] = useState([])
   const [titleState, setTitleState] = useState([])
@@ -17,11 +17,11 @@ function App() {
 
 
   useEffect(() => {
+    // Created my axios request within useEffect
     axios
     .get('https://api.nasa.gov/planetary/apod?api_key=Z4UaEDXfg4oFzV9ymB3z437byZwHScXFaMeAX1XR')
     .then(response => {
       // Attach the response to each needed state
-      setData(response.data)
       setDateState(response.data.date)
       setExplanationState(response.data.explanation)
       setTitleState(response.data.title)
@@ -32,19 +32,10 @@ function App() {
     })
   }, []);
 
-  console.log('data: ', data)
-  console.log('date:: ', dateState)
-  console.log('explanation: ', explanationState)
-  console.log('title: ', titleState)
-  console.log('url: ', urlState)
-
-  {console.log('Hola from within the app!')}
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <img src="https://ih0.redbubble.net/image.562683752.7556/pp,550x550.u6.jpg" style={{height: '150px', width: '150px'}}/>
+      <Header titleState={titleState} dateState={dateState} />
       <Picture urlState={urlState} />
       <Explanation explanationState={explanationState} />
     </div>
