@@ -77,9 +77,6 @@ DEMO KEY rate limits:
 
 _Note: if the photo url is NOT a photo, you will need to learn how to display a video in a React app on your own, OR just fetch the APOD from a different date by adding this to the back of the API endpoint: `&date=2012-03-14`_
 
-*My Key*
-<https://api.nasa.gov/planetary/apod?api_key=Z4UaEDXfg4oFzV9ymB3z437byZwHScXFaMeAX1XR>
-
 **Step 4 - Adding the Data to State**
 
 - Once you have made the call correctly, and logged the data, add the data to the state property you built.

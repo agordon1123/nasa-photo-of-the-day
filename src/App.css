@@ -8,6 +8,12 @@
   border-radius: 5px;
 }
 
+/* Temporary while iframe is initialized */
+iframe {
+  height: 300px;
+  width: 500px;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
