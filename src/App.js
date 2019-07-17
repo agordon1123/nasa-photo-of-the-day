@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 
 function App() {
+  {console.log('Hollo from within the app!')}
   return (
     <div className="App">
       <p>
