@@ -26,6 +26,7 @@ function App() {
       setExplanationState(response.data.explanation)
       setTitleState(response.data.title)
       setUrlState(response.data.url)
+      console.log(response.data.url)
     })
     .catch(error => {
       console.log('An unexpected error has occurred. Have you tried unplugging it and plugging it back in again?', error)
@@ -34,10 +35,15 @@ function App() {
 
   return (
     <div className="App">
-      <img src="https://ih0.redbubble.net/image.562683752.7556/pp,550x550.u6.jpg" style={{height: '150px', width: '150px'}}/>
-      <Header titleState={titleState} dateState={dateState} />
-      <Picture urlState={urlState} />
-      <Explanation explanationState={explanationState} />
+      <section className='upper-image'>
+        <img src="https://ih0.redbubble.net/image.562683752.7556/pp,550x550.u6.jpg" style={{height: '150px', width: '150px'}}/>
+      </section>
+
+      <section className='color-bg'>
+        <Header titleState={titleState} dateState={dateState} />
+        <Picture urlState={urlState} />
+        <Explanation explanationState={explanationState} />
+      </section>
     </div>
   );
 }

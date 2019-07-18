@@ -2,7 +2,7 @@ import React from 'react';
 
 const Explanation = (props) => {
     return (
-        <p>{props.explanationState}</p>
+        <p className='explanation'>{props.explanationState}</p>
     )
 }
 

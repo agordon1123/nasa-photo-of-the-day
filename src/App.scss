@@ -2,42 +2,88 @@
   text-align: center;
   /* Added to visualize layout */
   margin: 20px auto;
-  padding: 10px;
-  max-width: 600px;
-  border: 1px solid red;
+  font-family: 'Space Mono', monospace;
+  max-width: 880px;
+  border: 2px solid black;
   border-radius: 5px;
+  .upper-image {
+    background-color: white;
+    height: 214px;
+    display: flex;
+    img {
+      margin: auto;
+      animation: rotation 4s infinite linear;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  }
+  .header {
+    border-top: 2px solid black;
+    padding-top: 10px;
+    margin: 0;
+  }
+  .color-bg {
+    background-color: rgb(126, 132, 221);
+  }
   img {
-    height: 300px;
-    width: 500px;
-  }  
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    height: 375px;
+    max-width: 650px;
+    &:hover {
+      cursor: pointer;
+    }
   }
-  to {
-    transform: rotate(360deg);
+  .explanation {
+    padding: 20px;
+    margin: 0 20px;
+    text-align: left;
   }
 }
+
+// .App-logo {
+//   animation: App-logo-spin infinite 20s linear;
+//   height: 40vmin;
+//   pointer-events: none;
+// }
+
+// .App-header {
+//   background-color: #282c34;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
+
+// .App-link {
+//   color: #61dafb;
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+/* To do:
+
+Remove margin from App.scss
+Span from h1 to below:
+  Will be white above, possibly spinning logo
+  Will be a light color below
+Add spacey photo to background
+Research and add date picker
+Border to photo?
+
+
+*/
