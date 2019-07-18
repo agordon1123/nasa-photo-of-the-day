@@ -2,7 +2,7 @@ import React from 'react';
 
 const Picture = (props) => {
     return (    
-        <iframe src={props.urlState} />
+        <img src={props.urlState} />
     )
 }
 

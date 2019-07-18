@@ -6,7 +6,7 @@ import Header from './components/Header';
 
 import axios from "axios";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   // Created a state for each piece of data being passed around
